@@ -1,0 +1,14 @@
+<header>
+<h1>Dutch BookWorm app!</h1>
+</header>
+ISBN:<input type="text" [(ngModel)]="isbn">
+<button (click)="search()">search!</button>
+<div class="card" *ngIf="show">
+  <img src="{{response.CoverThumb}}" style="width:100%">
+  <div class="container">
+    <h4><b>{{response.Title}}</b></h4>
+    author(s): &nbsp;<span *ngFor="let authors of response.Authors">{{authors.Name}} &nbsp; </span>
+  </div>
+</div> 
+ 
+
